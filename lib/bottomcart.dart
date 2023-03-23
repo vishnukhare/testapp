@@ -10,15 +10,28 @@ class CartBottomBar extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Sub Total:\nShipping",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold)),
+                    Text("\$165\n\$5",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold)),
+                  ],
+                ),
+              ],
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Total:",style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold))
+                Text("Total:",style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold)),
+                Text("\$170",style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold))
               ],
             ),
+
             Container(
               alignment: Alignment.center,
-              height: 50,
+              height: 40,
               width: double.infinity,
               decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10,)
               ),

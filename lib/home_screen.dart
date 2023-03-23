@@ -14,15 +14,17 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        backgroundColor:  Colors.transparent,
-        elevation:  0,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         leading: IconButton(
-          onPressed: (){},
+          onPressed: () {},
           icon: SvgPicture.asset('assets/icons/menu.svg'),
         ),
-
         actions: [
-          IconButton(onPressed: () {}, icon: SvgPicture.asset("assets/icons/undraw_profile_pic_re_iwgo.svg"))
+          IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                  "assets/icons/undraw_profile_pic_re_iwgo.svg"))
         ],
       ),
       body: SingleChildScrollView(
@@ -35,18 +37,16 @@ class HomeScreen extends StatelessWidget {
             Form(
               child: TextFormField(
                 decoration: InputDecoration(
-                  hintText: "Search",
-
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: outlineInputBorder,
-                  enabledBorder: outlineInputBorder,
-                  focusedBorder: outlineInputBorder,
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: SvgPicture.asset('assets/icons/Search.svg'),
-                  )
-                  ),
+                    hintText: "Search",
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: outlineInputBorder,
+                    enabledBorder: outlineInputBorder,
+                    focusedBorder: outlineInputBorder,
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: SvgPicture.asset('assets/icons/Search.svg'),
+                    )),
               ),
             ),
             BannerScreen(),
@@ -55,11 +55,14 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: List.generate(
                   demo_categories.length,
-                      (index) => Padding(
-                        padding: const EdgeInsets.only(right: defaultPadding),
-                        child: CategoryCard(icon: demo_categories[index].icon ,title: demo_categories[index].title,press: () {},
-                        ),
-                      ),
+                  (index) => Padding(
+                    padding: const EdgeInsets.only(right: defaultPadding),
+                    child: CategoryCard(
+                      icon: demo_categories[index].icon,
+                      title: demo_categories[index].title,
+                      press: () {},
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -68,28 +71,42 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: SalomonBottomBar(
-        onTap:  (index) {},
+        onTap: (index) {},
         items: [
-            SalomonBottomBarItem(icon: Icon(Icons.home), title: Text(""), selectedColor: Colors.black,),
-            SalomonBottomBarItem(icon: Icon(Icons.favorite_border), title: Text(""), selectedColor: Colors.black,),
-            SalomonBottomBarItem(icon: Icon(Icons.notifications_none_outlined), title: Text(""), selectedColor: Colors.black,),
-            SalomonBottomBarItem(icon: Icon(Icons.person), title: Text(""), selectedColor: Colors.black,)
-          ],
+          SalomonBottomBarItem(
+            icon: Icon(Icons.home),
+            title: Text(""),
+            selectedColor: Colors.black,
+          ),
+          SalomonBottomBarItem(
+            icon: Icon(Icons.favorite_border),
+            title: Text(""),
+            selectedColor: Colors.black,
+          ),
+          SalomonBottomBarItem(
+            icon: Icon(Icons.notifications_none_outlined),
+            title: Text(""),
+            selectedColor: Colors.black,
+          ),
+          SalomonBottomBarItem(
+            icon: Icon(Icons.person),
+            title: Text(""),
+            selectedColor: Colors.black,
+          )
+        ],
       ),
     );
   }
 }
 
-
-
-
 class Categories extends StatelessWidget {
-  const Categories({Key? key,}) : super(key: key);
+  const Categories({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-
       height: 84,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
@@ -100,13 +117,11 @@ class Categories extends StatelessWidget {
           press: () {},
         ),
         separatorBuilder: (context, index) =>
-        const SizedBox(width: defaultPadding),
+            const SizedBox(width: defaultPadding),
       ),
     );
   }
 }
-
-
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
@@ -129,11 +144,11 @@ class CategoryCard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: defaultPadding / 2, horizontal: defaultPadding / 4),
+        padding: const EdgeInsets.symmetric(
+            vertical: defaultPadding / 2, horizontal: defaultPadding / 4),
         child: Column(
           children: [
-
-            Image.asset(icon,height: 40,width: 40),
+            Image.asset(icon, height: 40, width: 40),
             const SizedBox(height: defaultPadding / 2),
             Text(
               title,
@@ -146,10 +161,6 @@ class CategoryCard extends StatelessWidget {
   }
 }
 
-
 const OutlineInputBorder outlineInputBorder = OutlineInputBorder(
-  borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
-  borderSide: BorderSide.none
-);
-
-
+    borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
+    borderSide: BorderSide.none);
