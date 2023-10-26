@@ -22,7 +22,16 @@ completed all the given Requirments Screen or features
         CART SCREEN
 ![WhatsApp Image 2023-10-26 at 10 09 04 AM (1)](https://github.com/vishnukhare/testapp/assets/85063816/8df9ddec-06ee-4950-a469-384c24ae7d1e)
 
+       FAVROUT SCREEN
+![WhatsApp Image 2023-10-26 at 10 22 53 AM (1)](https://github.com/vishnukhare/testapp/assets/85063816/b74448d8-774c-4c58-a619-0e15c631af45)
+
        PRODUCT DETAIL SCREEN
 ![WhatsApp Image 2023-10-26 at 10 09 04 AM](https://github.com/vishnukhare/testapp/assets/85063816/aa98b3b6-63eb-4d84-b297-a0cdb928153e)
+
+      PROFILE SCREEN
+![WhatsApp Image 2023-10-26 at 10 22 53 AM](https://github.com/vishnukhare/testapp/assets/85063816/f97701bb-e182-4feb-9fc9-6aae5bc28de5)
+
+       APK LINK for the both versions
+https://drive.google.com/drive/folders/1kVEDHTPvGkRSMbuBl0KVmWz6idBUI_V1?usp=sharing
 
 HOPE YOU GUYS LIKE IT!!
